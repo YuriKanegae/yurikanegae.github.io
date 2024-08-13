@@ -1,0 +1,87 @@
+/* fonts */
+@font-face {
+    font-family: 'Porcine';
+    
+    src: url('assets/fonts/porcine/Porcine-Heavy.eot');
+    src: local('Porcine Heavy'), local('Porcine-Heavy'),
+        url('assets/fonts/porcine/Porcine-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/porcine/Porcine-Heavy.woff2') format('woff2'),
+        url('assets/fonts/porcine/Porcine-Heavy.woff') format('woff'),
+        url('assets/fonts/porcine/Porcine-Heavy.ttf') format('truetype');
+
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* structure */
+html, body {
+    margin: 0;
+
+    width:  100vw;
+    height: 100vh;
+}
+
+body, .links {
+    display:        flex;
+    align-items:    center;
+}
+
+body {
+    justify-content:    center;
+    background-color:   black;
+}
+
+/* itens */
+.heading {
+    color:      #e70800;
+
+    font-family:    Porcine, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:    bolder;
+    font-size:      8em;
+
+    margin-bottom: 0;
+}
+
+.links { justify-content: space-around; }
+
+.icon {
+    font-size:  3em;
+    color:      #e70800;
+}
+
+/* separator */
+.separator {
+    margin: 1em 0;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color:      #e70800;
+
+    font-family:    Porcine, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:    bolder;
+}
+  
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e70800;
+}
+  
+.separator:not(:empty)::before {
+    margin-right: .25em;
+}
+  
+.separator:not(:empty)::after {
+    margin-left: .25em;
+}
+
+@media only screen and (max-width: 600px) {
+    .heading{
+        font-size: 4em;
+    }
+    .icon {
+        font-size:  2em;
+    }
+  }
